@@ -1,0 +1,13 @@
+<div class ="container p-3 my-3 border" style="list-style: none" style="width: 900px;">
+      <h1 align ="center"> <strong>Category</strong>: {{category.name}}</h1>    
+        <p>List of products in this category</p>
+
+        <div class="card-group">      
+  <li *ngFor="let p of category.products">
+      
+    <app-product [product] ='p'></app-product>
+  
+  </li>
+  </div>
+<button type="button" class="btn btn-danger" (click)="deletecategory(category.id)">Delete category</button>
+</div>

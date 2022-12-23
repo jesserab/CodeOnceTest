@@ -1,0 +1,15 @@
+<li *ngFor="let c of categories" style="list-style: none">
+  <div>
+    <p style="text-align:center" > Add a product to the category {{c.name}}</p>
+  </div>
+  <div class ="container">
+    <form #f="ngForm" (ngSubmit)="click(c.id,f.value)">
+      <input class="form-control" placeholder="Enter product name" type="text"  ngModel name="name">
+      <input class="form-control" placeholder="Enter product description" type="text" ngModel name="description">
+      <input class="form-control" placeholder="Enter product quantity" type="int" ngModel name="quantity">
+      <button type="submit" class ="btn btn-info btn-sm">Add product to this category</button>
+    </form>
+  </div>
+
+
+</li>

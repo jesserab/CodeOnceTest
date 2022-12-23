@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+
+  db:
+    image: mysql:8
+    container_name : db
+    environment :
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: store   
+      MYSQL_USER: jesser
+      MYSQL_PASSWORD: jesser14
+    ports :
+      - 3306:3306
+
+  backend:
+    build: ./CodeOnceTest
+    image:    backend:latest
+    container_name :  backend
+    ports:
+      - 8080:8080
+    links: 
+      - db
+
+  front:
+    build : ./CodeOnceFront
+    image : front:latest
+    container_name : front       
+    ports:
+      - 4200:80
+    links:
+      -   backend

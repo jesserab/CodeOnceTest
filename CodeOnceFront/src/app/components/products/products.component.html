@@ -1,0 +1,25 @@
+<div class ="container" style="list-style: none">
+
+    <form #f="ngForm" (ngSubmit)="getproducts(f.value)">
+      <input class="form-control" placeholder="Enter category name" type="text"  ngModel name="name">
+      <button type="submit" class ="btn btn-info btn-sm">Get disponible products of this category</button>
+    </form>
+
+    <div class="container">
+         <table class="table">
+          <tr>
+            <th>Name</th><th>Description</th><th>Quantity</th>
+            </tr>
+            <tr *ngFor ="let p of products">
+               <td>{{p.name}}</td>
+               <td>{{p.description}}</td>
+               <td>{{p.quantity}}</td>
+            </tr>
+            
+
+         </table>
+    </div>
+    
+    
+</div>
+    

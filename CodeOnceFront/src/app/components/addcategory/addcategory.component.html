@@ -1,0 +1,12 @@
+<div class ="container" style="list-style: none">
+
+<form #f="ngForm" (ngSubmit)="Ajout(f.value)">
+  <input class="form-control" type="text" placeholder="Enter category name" ngModel name="name">
+  <input class="form-control" type="text" placeholder="Enter category description" ngModel name="description">
+  <button type="submit" class ="btn btn-info btn-sm">Add category</button>
+</form>
+
+
+</div>
+
+<app-addproduct></app-addproduct>

@@ -1,0 +1,8 @@
+  
+  <div class = "card" style="width: 200px;">
+    <p>Product : </p>
+    <div class="card-body" >Product name : {{product.name}}</div>
+    <div class="card-body" >Product description : {{product.description}}</div>
+    <div class="card-body" >Product quantity : Quantity : {{product.quantity}}</div>
+    <button type="button" class="btn btn-danger" (click)="deleteproduct(product.id)">Delete product</button>
+  </div>
